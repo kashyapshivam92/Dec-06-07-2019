@@ -12,7 +12,8 @@ public class MyFormController {
 
 	@PostMapping("/processData")
 	//@ResponseBody
-	public String processFormData(@RequestParam("firstname") String firstName, HttpSession session) {
+	public String processFormData(@RequestParam("firstname") String firstName, 
+			HttpSession session) {
 		String message = "Hello " + firstName;
 		session.setAttribute("message", message);
 		return "output";
