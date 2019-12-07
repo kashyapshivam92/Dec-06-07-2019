@@ -15,6 +15,11 @@ public class ExampleForCachingController {
 	@Autowired
 	private CacheManager cacheManager;
 	
+	@GetMapping("/removeinfo/{name}")
+	public String removeInfo(@PathVariable String name) {
+		return myService.removeMessage(name);
+	}
+	
 	@GetMapping("/info/{name}")
 	public String getInfo(@PathVariable String name) {
 		Cache cache =  cacheManager.getCache("message");
