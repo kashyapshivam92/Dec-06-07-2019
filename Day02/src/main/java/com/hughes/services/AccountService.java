@@ -2,8 +2,10 @@ package com.hughes.services;
 
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hughes.entities.Account;
 import com.hughes.entities.Statement;
@@ -28,7 +30,8 @@ public class AccountService {
 			createStatement(accountNumber, amount, type);
 		}
 	}
-
+	
+	@Transactional
 	public void withdraw(long accountNumber,long amount, String type) {
 		Optional<Account> optAccount = accountRepository.findById(accountNumber);
 		if(optAccount.isPresent()) {

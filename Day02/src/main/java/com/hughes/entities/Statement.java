@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "statements")
@@ -18,9 +21,12 @@ public class Statement {
 	private long accountNumber;
 	
 	@Column
+	@NotNull
+	@NotEmpty
 	private String type;
 
 	@Column
+	@Min(1)
 	private long amount;
 	
 	public int getId() {

@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "accounts")
@@ -24,9 +27,12 @@ public class Account {
 	private long accountNumber;
 	
 	@Column
+	@NotNull
+	@NotEmpty
 	private String owner;
 	
 	@Column
+	@Min(1)
 	private long balance;
 	
 	public long getAccountNumber() {
