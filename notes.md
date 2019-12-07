@@ -3,6 +3,9 @@
 * Swagger2   __For Documentation__
 * Keywords in Swagger2 __Docket, @ApiOperation, @ApiResponses, @ApiParam__
 * Exception Handling __@ExceptionHandler, @ControllerAdvice__
+* Caching __@Cacheable, @EnableCaching, @CachePut, @CacheEvict__
+* Spring Security __WebSecurityConfigurerAdapter override configure() methods__
+* __Leave it to the security expert__
 
 <hr/><br/>
 

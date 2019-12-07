@@ -2,4 +2,31 @@ welcome:
   message: Welcome to YML file configuration
 
 server:
-  port: 8080  
+  port: 8080
+
+spring:
+  security:
+    user:
+      name: admin
+      password: admin  
+---
+
+spring:
+  profiles: qa
+  
+welcome:
+  message: Welcome to YML file configuration QA
+  
+server:
+  port: 8081
+    
+---
+
+spring:
+  profiles: prod
+  
+welcome:
+  message: Welcome to YML file configuration PROD   
+  
+server:
+  port: 8082  
