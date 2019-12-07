@@ -1,5 +1,6 @@
 package com.hughes;
 
+import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,36 @@ public class PeopleController {
 
 	@Autowired
 	private PersonDao personDao;
+	
+	@GetMapping("/meta")
+	public String getInfo() {
+		String meta = "";
+		meta += "Class is " + personDao.getClass().getName() + "<br/>";
+		for (Class interfaceObj : personDao.getClass().getInterfaces()) {
+			meta += "<br/> " + interfaceObj.getName();
+		}
+		meta += "<br><br/>";
+		for (Method method : personDao.getClass().getMethods()) {
+			meta += "<br/>" + method.getName();
+		}
+		return meta;
+	}
+	
+	
+	@GetMapping("/all/gt/{age}")
+	public List<Person> getAllGreaterThanAge(@PathVariable int age) {
+		return personDao.findAllWithAgeGreaterThan(age);	
+	}
+	
+	@GetMapping("/all/{name}/{age}")
+	public List<Person> getAllByNameAndAge(@PathVariable String name, @PathVariable int age) {
+		return personDao.findAllByNameAndAge(name, age);
+	}
+	
+	@GetMapping("/{name}/{age}")
+	public Person getByNameAndAge(@PathVariable String name, @PathVariable int age) {
+		return personDao.findByNameAndAge(name, age);
+	}
 	
 	@GetMapping("/")
 	public List<Person> getAllPersons() {
