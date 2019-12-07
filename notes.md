@@ -1,6 +1,7 @@
 #### Some Notes for you
 
 * Swagger2   __For Documentation__
+* Keywords in Swagger2 __Docket, @ApiOperation, @ApiResponses, @ApiParam__
 * Exception Handling __@ExceptionHandler, @ControllerAdvice__
 
 <hr/><br/>
