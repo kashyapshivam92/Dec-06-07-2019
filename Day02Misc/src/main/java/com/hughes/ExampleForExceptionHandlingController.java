@@ -15,6 +15,13 @@ import org.springframework.web.context.request.WebRequest;
 @RestController
 @Validated
 public class ExampleForExceptionHandlingController {
+	
+	
+	@GetMapping("/hello") 
+	public String hello() {
+		return "Hello world from Spring Boot";
+	}
+	
 
 	@GetMapping("/add/{num1}/{num2}")
 	public String add(@PathVariable int num1, @PathVariable int num2) throws MyCustomException {
