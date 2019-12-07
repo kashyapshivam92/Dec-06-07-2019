@@ -1,0 +1,23 @@
+{
+  "name": "dec-06-07-2019",
+  "version": "1.0.0",
+  "description": "```javascript\r const instructor = {\r \temail: \"prabhu.bits@gmail.com\",\r \tblog: \"http://healthycoder.in\",\r \tbooks: [\"Spring 3.0 Black book\",\"Practical Ext JS 4\"]\r } \r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prabhu-durasoft/Dec-06-07-2019.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prabhu-durasoft/Dec-06-07-2019/issues"
+  },
+  "homepage": "https://github.com/prabhu-durasoft/Dec-06-07-2019#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1"
+  }
+}
