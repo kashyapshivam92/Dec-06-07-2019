@@ -6,6 +6,7 @@
 * Caching __@Cacheable, @EnableCaching, @CachePut, @CacheEvict__
 * Spring Security __WebSecurityConfigurerAdapter override configure() methods__
 * __Leave it to the security expert__
+* CORS __@CrossOrigin__
 
 <hr/><br/>
 
