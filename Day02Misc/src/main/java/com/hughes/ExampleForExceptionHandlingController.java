@@ -16,6 +16,17 @@ import org.springframework.web.context.request.WebRequest;
 @Validated
 public class ExampleForExceptionHandlingController {
 
+	@GetMapping("/add/{num1}/{num2}")
+	public String add(@PathVariable int num1, @PathVariable int num2) throws MyCustomException {
+		if(num1 == 0) {
+			throw new MyCustomException("num1 cannot be zero");
+		}
+		else {
+			return "Sum: " + (num1 + num2);
+		}
+	}
+	
+	
 	@GetMapping("/divide/{num1}/{num2}")
 	public String divide(@PathVariable int num1, @PathVariable @Min(1) int num2) {
 		return "Divide: " + (num1 / num2);
