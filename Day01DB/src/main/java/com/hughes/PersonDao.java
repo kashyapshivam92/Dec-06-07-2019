@@ -12,6 +12,8 @@ public interface PersonDao extends CrudRepository<Person, Integer> {
 	List<Person> findAllWithAgeGreaterThan(@Param("p1") int age);
 	
 	//findBy
+	Person findByIdAndNameAndAge(int id, String name, int age);
+	
 	Person findByName(String name);
 	Person findByAge(int age);
 	Person findByNameAndAge(String name, int age);

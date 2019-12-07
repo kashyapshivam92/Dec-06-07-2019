@@ -45,6 +45,11 @@ public class PeopleController {
 		return personDao.findAllByNameAndAge(name, age);
 	}
 	
+	@GetMapping("/{id}/{name}/{age}")
+	public Person getByIdAndNameAndAge(@PathVariable int id, @PathVariable String name, @PathVariable int age) {
+		return personDao.findByIdAndNameAndAge(id, name, age);
+	}
+	
 	@GetMapping("/{name}/{age}")
 	public Person getByNameAndAge(@PathVariable String name, @PathVariable int age) {
 		return personDao.findByNameAndAge(name, age);
