@@ -3,20 +3,7 @@
 * Swagger2   __For Documentation__
 * Exception Handling __@ExceptionHandler, @ControllerAdvice__
 
-
-
-* forhughes.cxsp3c1bpdio.ap-south-1.rds.amazonaws.com
-
-create database training;
-use training;
-persons
-	id int primary key auto_increment
-	name varchar(40)
-	age int(3)
-
-```sql
-create table persons(id int(4) not null primary key auto_increment, name varchar(40), age int(4));
-```
+<hr/><br/>
 
 
 ## Spring Tool Suite
