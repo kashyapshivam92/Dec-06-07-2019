@@ -22,7 +22,7 @@ public class Day02Application {
 	public Docket swaggerConfig() {
 		return new Docket(DocumentationType.SWAGGER_2)
 					.select()
-					.apis(RequestHandlerSelectors.basePackage("com.hughes"))
+					.apis(RequestHandlerSelectors.any())
 					.paths(PathSelectors.any())
 					.build()
 					.apiInfo(new ApiInfoBuilder().title("Training").version("1.0").description("Hughes").build());
